@@ -27,21 +27,24 @@ function playRound(playerSelection, computerSelection) { //Outcomes of what the 
         return "Uh oh! Looks like it's a tie!";
     }
 }
-const computerSelection = computerPlay();
-const playerSelection = window.prompt("Enter your choice: ").toLowerCase();
 
 
-let playerScore = 0; // Player's score
-let computerScore = 0; // Computer's score
+let playerScore = 0; // Player's starting score
+let computerScore = 0; // Computer's starting score
 
 function game() { // Checks to see which score will be higher than the other's
     for (let i = 0; i < 5; i++) {
+        const computerSelection = computerPlay(); //Takes the computer's input
+        const playerSelection = window.prompt("Enter your choice: ").toLowerCase(); //Takes the users's input
         playRound(playerSelection, computerSelection);
         if (playRound(playerSelection, computerSelection) === playerWins) {
+            console.log("You win this round!");
             playerScore++;
         } else {
+            console.log("You lose this round!");
             computerScore++;
         }
+        continue;
      }
      if (playerScore > computerScore) {
          console.log("The player wins overall!");
@@ -50,7 +53,7 @@ function game() { // Checks to see which score will be higher than the other's
         return;
      }
      else {
-         console.log("It's a draw!")
+         console.log("It's a draw!");
          return;
      }
 }
