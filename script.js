@@ -24,7 +24,7 @@ function playRound(playerSelection, computerSelection) { //Outcomes of what the 
     } else if (playerSelection === "rock" && computerSelection === "paper") {
         return computerWins;
     } else {
-        return "Uh oh! Looks like it's a tie!";
+        return "Uh oh! Looks like you typed in something invalid. Please select between the options 'Rock', 'Paper', or 'Scissors.' Thank you!";
     }
 }
 
