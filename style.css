@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #cffcff;
+  color: hsl(315, 100%, 83%);
+  margin: 50px;
+}
+
+.button-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+}
+
+.resultDisplayer {
+  color: black;
+  font-weight: 600;
+}
+
+.overallWinner {
+  color: green;
+  font-weight: 900;
+}
